@@ -30,8 +30,8 @@
 |FrameHeight|`uint32_t`|4||한 프레임의 세로 길이|
 |NumberOfFrames|`uint32_t`|4||총 프레임의 수|
 |Dummy1|`uint8_t[]`|1200|0x00|더미 배열 1|
-|Offsets|`uint32_t[]`|300||압축된 프레임의 시작되는 상대 주소 배열|
-|CompressedSizes|`uint16_t[]`|300||압축된 프레임의 크기 기록 배열|
+|Offsets|`uint32_t[]`|1200||압축된 프레임의 시작되는 상대 주소 배열|
+|CompressedSizes|`uint16_t[]`|600||압축된 프레임의 크기 기록 배열|
 |TotalCompressedSize|`uint32_t`|4||총 압축 크기|
 |Width|`uint32_t`|4||스프라이트 이미지의 가로 길이|
 |Height|`uint32_t`|4||스프라이트 이미지의 세로 길이|
