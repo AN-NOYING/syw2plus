@@ -40,7 +40,3 @@
 
 > [!TIP]
 > `Math.floor(Width / FrameWidth)`로 X축에 존재하는 프레임의 수를 획득할 수 있다. Y축도 마찬가지.
-
-> [!NOTE]
-> 지금 기록하고 생각난 건데... `CompressedPaletteIndexes`는 동적 할당이 아니라 `NumberOfFrames`와 `CompressedSizes`를 이용해 읽어볼 수 있을 듯
-> 어차피 한 프레임의 크기는 서로 같고, 압축된 크기도 같을테니까.
