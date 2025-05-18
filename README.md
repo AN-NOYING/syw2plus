@@ -35,7 +35,7 @@
 |TotalCompressedSize|`uint32_t`|4||총 압축 크기|
 |Width|`uint32_t`|4||스프라이트 이미지의 가로 길이|
 |Height|`uint32_t`|4||스프라이트 이미지의 세로 길이|
-|Dummt2|`uint8_t[]`|32|0x00|더미 배열 2|
+|Dummy2|`uint8_t[]`|32|0x00|더미 배열 2|
 |CompressedPaletteIndexes|`uint8_t*`|||팔레트 인덱스 배열|
 
 > [!TIP]
