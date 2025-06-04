@@ -49,21 +49,23 @@ SPR 파일과 마찬가지로, 자체 제작 파일 구조를 따르는 것으�
 ```cpp
 struct YimjinrokTiLe {
   uint32_t Signature;                 // 시그니쳐
-  uint32_t TileWidth;                 // 한 프레임의 가로 길이
-  uint32_t TileHeight;                // 한 프레임의 세로 길이
+  uint32_t TileWidth;                 // 한 타일의 가로 길이
+  uint32_t TileHeight;                // 한 타일의 세로 길이
   uint32_t NumberOfTiles;             // 총 프레임의 수
   uint8_t Dummy1[1200];               // 더미 배열 1
   uint32_t Offsets[300];              // 오프셋 기록 배열
   uint16_t CompressedSizes[300];      // 압축 기록 배열
   uint32_t TotalCompressedSize;       // 총 압축 크기
-  uint32_t Width;                     // SPR 이미지의 가로 길이
-  uint32_t Height;                    // SPR 이미지의 세로 길이
+  uint32_t Width;                     // YTL 이미지의 가로 길이
+  uint32_t Height;                    // YTL 이미지의 세로 길이
   uint8_t Dummy2[32];                 // 더미 배열 2
   uint8_t* CompressedPaletteIndexes;  // 팔레트 인덱스 배열
 };
 ```
 
 SYW2Plus에서 사용되는 YTL 파일의 `Signature`는 항상 0x09의 값을 가집니다. 실행 파일에서 0x09가 아니면 파일 읽기를 실패합니다.
+
+압축 기록 배열은 사용되지 않는 걸로 보입니다.
 
 > [!TIP]
 > `Math.floor(Width / TileWidth)`와 `Math.floor(Height / TileHeight)` 식을 통해 X축과 Y축에 존재하는 프레임의 수를 취득할 수 있습니다. 이를 통헤 NxN으로 구성되었다는 걸 확인할 수 있습니다.
